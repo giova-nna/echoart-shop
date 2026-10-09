@@ -9,12 +9,12 @@ import { FormularioClientes } from './pages/gestao/formulario-clientes/formulari
 import { ControleProdutos } from './pages/gestao/controle-produtos/controle-produtos';
 
 export const routes: Routes = [
-  { path: '', component: Home },
-  { path: 'login', component: Login },
-  { path: 'carrinho', component: Carrinho },
-  { path: 'gestao', component: Gestao },
-  { path: 'gestao/cadastro-clientes', component: CadastroClientes },
-  { path: 'gestao/formulario-clientes', component: FormularioClientes },
-  { path: 'gestao/manutencao-produtos', component: ManutencaoProdutos },
-  { path: 'gestao/controle-produtos', component: ControleProdutos },
+    { path: '', component: Home },
+    { path: 'login', component: Login },
+    { path: 'carrinho', component: Carrinho },
+    { path: 'gestao', component: Gestao },
+    { path: 'gestao/cadastro-clientes', component: CadastroClientes },
+    { path: 'gestao/formulario-clientes', component: FormularioClientes },
+    { path: 'gestao/manutencao-produtos', component: ManutencaoProdutos },
+    { path: 'gestao/controle-produtos', component: ControleProdutos },
 ];

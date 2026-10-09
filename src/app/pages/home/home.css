@@ -21,7 +21,7 @@ a {
     min-height: 320px;
     padding: 2rem 1rem;
     text-align: center;
-    color: var(--cor-letra, #f0f0f0);
+    color: var(--cor-letra-clara);
     background:
         linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
         url('https://images.stockcake.com/public/7/1/5/715ea948-532e-478b-8cd5-7d5abbadc732/cozy-music-studio-stockcake.jpg') center / cover;
@@ -44,7 +44,7 @@ a {
 .botao {
     padding: .6rem 1.4rem;
     border-radius: 50px;
-    background-color: var(--cor-letra, #f0f0f0);
+    background-color: var(--cor-letra-clara);
     color: var(--fundo-um, #970c13);
     font-weight: 700;
 }
@@ -104,7 +104,7 @@ a {
     flex-direction: column;
     overflow: hidden;
     border-radius: 8px;
-    background-color: #f4f4f4;
+    background-color: var(--fundo-tres);
     box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
 }
 
@@ -127,7 +127,7 @@ a {
     padding: .2rem .6rem;
     border-radius: 50px;
     background-color: var(--fundo-um);
-    color: var(--cor-letra);
+    color: var(--cor-letra-clara);
     font-size: .85rem;
     font-weight: 700;
 }
@@ -165,7 +165,7 @@ a {
     padding: .5rem;
     border-radius: 6px;
     background-color: var(--fundo-um);
-    color: var(--cor-letra);
+    color: var(--cor-letra-clara);
     text-align: center;
 }
 

@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+.pagina {
+    width: 100%;
+}
+
+.content-container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 14px auto 30px;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.formulario {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #DDD;
+    border-radius: 6px;
+    background-color: var(--fundo-dois);
+}
+
+.campo {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.campo label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.campo input {
+    width: 100%;
+    /* height: 24px; */
+    padding: 10px 8px;
+    font-size: .8rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: var(--fundo-tres);
+}
+
+.campo-id input {
+    width: 110px;
+}
+
+.campo-preco input {
+    width: 150px;
+}
+
+.campo-estoque input {
+    width: 250px;
+}
+
+.btn-cadastrar {
+    width: 100%;
+    height: 26px;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--fundo-um);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-cadastrar:hover {
+    background-color: color-mix(in srgb, var(--fundo-um) 90%, black);
+}
+
+
+@media (max-width: 600px) {
+    .content-container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}

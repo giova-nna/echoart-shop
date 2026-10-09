@@ -1,1 +1,42 @@
-<p>controle-produtos works!</p>
+<div class="pagina">
+
+    <main class="content-container">
+
+        <h1>Formulário de Cadastro de Produtos</h1>
+
+        <form class="formulario">
+
+            <div class="campo campo-id">
+                <label for="id">ID</label>
+                <input type="number" id="id" name="id" placeholder="Digite o ID">
+            </div>
+
+            <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o nome do produto" required>
+            </div>
+
+            <div class="campo campo-preco">
+                <label for="id">Preço</label>
+                <input type="number" id="preco" name="preco" placeholder="Digite o preço">
+            </div>
+
+            <div class="campo">
+                <label for="nome">Marca</label>
+                <input type="text" id="marca" name="marca" placeholder="Digite a marca do produto" required>
+            </div>
+
+            <div class="campo campo-estoque">
+                <label for="id">Estoque</label>
+                <input type="number" id="estoque" name="estoque" placeholder="Digite a quantidade em estoque">
+            </div>
+
+            <button type="submit" class="btn-cadastrar" (click)="onBotaoClicado()">
+                Cadastrar Produto
+            </button>
+
+        </form>
+
+    </main>
+
+</div>

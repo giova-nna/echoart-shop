@@ -1,383 +1,303 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<main class="container">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TÍTULO -->
 
-    <title>Meu Carrinho</title>
+    <div class="page-title">
+        <h1>Carrinho</h1>
+        <span class="items-count">
+            3 produtos
+        </span>
 
-    <link rel="stylesheet" href="carrinho.css">
-</head>
+    </div>
 
-<body>
 
-    <main class="container">
+    <!-- CARRINHO -->
 
-        <!-- TÍTULO -->
+    <section class="cart-layout">
 
-        <div class="page-title">
+        <!-- PRODUTOS -->
 
-            <div>
+        <section class="cart-products">
 
-                <span class="breadcrumb">
-                    Início / Carrinho
-                </span>
+            <div class="cart-header">
 
-                <h1>Meu carrinho</h1>
+                <h2>Produtos</h2>
+
+                <button class="clear-cart" type="button" onclick="alert('O carrinho foi limpo!')">
+                    Limpar carrinho
+                </button>
 
             </div>
 
-            <span class="items-count">
-                3 produtos
-            </span>
 
-        </div>
+            <!-- PRODUTO 1 -->
 
+            <article class="cart-product">
 
-        <!-- CARRINHO -->
+                <div class="product-image">
+                    <img src="https://barramusic.com.br/wp-content/uploads/2026/09/Novo-Projeto-2026-09-08T161710.118.webp"
+                        alt="Violão Acústico">
+                </div>
 
-        <section class="cart-layout">
+                <div class="product-info">
 
-            <!-- PRODUTOS -->
+                    <h3>
+                        Violão Acústico
+                    </h3>
 
-            <section class="cart-products">
+                    <div class="product-details">
 
-                <div class="cart-header">
+                        <span>Cor: Mogno</span>
+                        <span>Marca: Genérico</span>
 
-                    <h2>Produtos</h2>
+                    </div>
 
-                    <button
-                        class="clear-cart"
-                        type="button"
-                        onclick="alert('O carrinho foi limpo!')">
-                        Limpar carrinho
+                    <button class="remove-product" type="button" (click)="onBotaoClicado()">
+                        Remover
                     </button>
 
                 </div>
 
-
-                <!-- PRODUTO 1 -->
-
-                <article class="cart-product">
-
-                    <div class="product-image">
-                        <img
-                            src="tenis.jpg"
-                            alt="Tênis Esportivo Premium">
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>
-                            Tênis Esportivo Premium
-                        </h3>
-
-                        <p>
-                            Tênis confortável para corrida e atividades esportivas.
-                        </p>
-
-                        <div class="product-details">
-
-                            <span>Cor: Preto</span>
-                            <span>Tamanho: 42</span>
-
-                        </div>
-
-                        <button
-                            class="remove-product"
-                            type="button"
-                            onclick="alert('Produto removido do carrinho!')">
-                            Remover
-                        </button>
-
-                    </div>
-
-                    <div class="product-price">
-
-                        <strong>
-                            R$ 299,90
-                        </strong>
-
-                        <span>
-                            R$ 349,90
-                        </span>
-
-                    </div>
-
-                    <div class="quantity">
-
-                        <button
-                            type="button"
-                            onclick="alert('Quantidade diminuída!')">
-                            −
-                        </button>
-
-                        <span>1</span>
-
-                        <button
-                            type="button"
-                            onclick="alert('Quantidade aumentada!')">
-                            +
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PRODUTO 2 -->
-
-                <article class="cart-product">
-
-                    <div class="product-image">
-                        <img
-                            src="camiseta.jpg"
-                            alt="Camiseta Básica Premium">
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>
-                            Camiseta Básica Premium
-                        </h3>
-
-                        <p>
-                            Camiseta masculina em algodão de alta qualidade.
-                        </p>
-
-                        <div class="product-details">
-
-                            <span>Cor: Branca</span>
-                            <span>Tamanho: M</span>
-
-                        </div>
-
-                        <button
-                            class="remove-product"
-                            type="button"
-                            onclick="alert('Produto removido do carrinho!')">
-                            Remover
-                        </button>
-
-                    </div>
-
-                    <div class="product-price">
-
-                        <strong>
-                            R$ 89,90
-                        </strong>
-
-                    </div>
-
-                    <div class="quantity">
-
-                        <button
-                            type="button"
-                            onclick="alert('Quantidade diminuída!')">
-                            −
-                        </button>
-
-                        <span>2</span>
-
-                        <button
-                            type="button"
-                            onclick="alert('Quantidade aumentada!')">
-                            +
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PRODUTO 3 -->
-
-                <article class="cart-product">
-
-                    <div class="product-image">
-                        <img
-                            src="relogio.jpg"
-                            alt="Relógio Inteligente">
-                    </div>
-
-                    <div class="product-info">
-
-                        <h3>
-                            Relógio Inteligente
-                        </h3>
-
-                        <p>
-                            Smartwatch com monitoramento de atividades.
-                        </p>
-
-                        <div class="product-details">
-
-                            <span>Cor: Preto</span>
-
-                        </div>
-
-                        <button
-                            class="remove-product"
-                            type="button"
-                            onclick="alert('Produto removido do carrinho!')">
-                            Remover
-                        </button>
-
-                    </div>
-
-                    <div class="product-price">
-
-                        <strong>
-                            R$ 499,90
-                        </strong>
-
-                    </div>
-
-                    <div class="quantity">
-
-                        <button
-                            type="button"
-                            onclick="alert('Quantidade diminuída!')">
-                            −
-                        </button>
-
-                        <span>1</span>
-
-                        <button
-                            type="button"
-                            onclick="alert('Quantidade aumentada!')">
-                            +
-                        </button>
-
-                    </div>
-
-                </article>
-
-            </section>
-
-
-            <!-- RESUMO -->
-
-            <aside class="order-summary">
-
-                <h2>
-                    Resumo do pedido
-                </h2>
-
-                <div class="summary-line">
-
-                    <span>
-                        Subtotal
-                    </span>
+                <div class="product-price">
 
                     <strong>
-                        R$ 979,70
+                        R$ 1.349,90
+                    </strong>
+
+                    <span>
+                        R$ 1.499,90
+                    </span>
+
+                </div>
+
+                <div class="quantity">
+
+                    <button type="button" (click)="onBotaoClicado()">
+                        −
+                    </button>
+
+                    <span>1</span>
+
+                    <button type="button" (click)="onBotaoClicado()">
+                        +
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUTO 2 -->
+
+            <article class="cart-product">
+
+                <div class="product-image">
+                    <img src="https://akusticamusical.fbitsstatic.net/img/p/bateria-d-one-rocket-dr20-bks-black-satin-20-14-12-10-c-banco-e-ferragens-acustica-1133584/1354271.jpg?w=1000&h=1000&v=202508070731&qs=ignore"
+                        alt="Bateria Acústica">
+                </div>
+
+                <div class="product-info">
+
+                    <h3>
+                        Bateria Acústica
+                    </h3>
+
+                    <div class="product-details">
+
+                        <span>Cor: Preto</span>
+                        <span>Marca: Genérico</span>
+
+                    </div>
+
+                    <button class="remove-product" type="button" (click)="onBotaoClicado()">
+                        Remover
+                    </button>
+
+                </div>
+
+                <div class="product-price">
+
+                    <strong>
+                        R$ 4.890,00
                     </strong>
 
                 </div>
 
-                <div class="summary-line">
+                <div class="quantity">
 
-                    <span>
-                        Frete
-                    </span>
+                    <button type="button" (click)="onBotaoClicado()">
+                        −
+                    </button>
 
-                    <strong>
-                        Grátis
-                    </strong>
+                    <span>1</span>
 
-                </div>
-
-                <div class="summary-line">
-
-                    <span>
-                        Desconto
-                    </span>
-
-                    <strong>
-                        - R$ 50,00
-                    </strong>
+                    <button type="button" (click)="onBotaoClicado()">
+                        +
+                    </button>
 
                 </div>
 
+            </article>
 
-                <!-- FRETE -->
 
-                <div class="shipping">
+            <!-- PRODUTO 3 -->
 
-                    <label>
-                        Calcular frete
-                    </label>
+            <article class="cart-product">
 
-                    <div class="cep">
+                <div class="product-image">
+                    <img src="https://kzmusicstore.com.br/cdn/shop/files/kz-zsn-pro-kz-music-store-14.png?v=1716585548&width=1000"
+                        alt="Fone de Ouvido Studio">
+                </div>
 
-                        <input
-                            type="text"
-                            placeholder="Digite seu CEP">
+                <div class="product-info">
 
-                        <button
-                            type="button"
-                            onclick="alert('Frete calculado!')">
-                            Calcular
-                        </button>
+                    <h3>
+                        Fone de Ouvido Studio
+                    </h3>
+
+                    <div class="product-details">
+
+                        <span>Cor: Cinza</span>
+                        <span>Marca: Echo Music</span>
 
                     </div>
 
+                    <button class="remove-product" type="button" (click)="onBotaoClicado()">
+                        Remover
+                    </button>
+
                 </div>
 
-
-                <!-- TOTAL -->
-
-                <div class="summary-total">
-
-                    <span>
-                        Total
-                    </span>
+                <div class="product-price">
 
                     <strong>
-                        R$ 929,70
+                        R$ 390,00
                     </strong>
 
                 </div>
 
+                <div class="quantity">
 
-                <!-- CHECKOUT -->
+                    <button type="button" (click)="onBotaoClicado()">
+                        −
+                    </button>
 
-                <button
-                    class="checkout"
-                    type="button"
-                    onclick="alert('Compra iniciada!')">
+                    <span>2</span>
 
-                    Finalizar compra
-
-                    <span>
-                        →
-                    </span>
-
-                </button>
-
-
-                <!-- SEGURANÇA -->
-
-                <div class="security">
-
-                    <span>
-                        🔒
-                    </span>
-
-                    <p>
-                        Compra segura e protegida
-                    </p>
+                    <button type="button" (click)="onBotaoClicado()">
+                        +
+                    </button>
 
                 </div>
 
-            </aside>
+            </article>
 
         </section>
 
-    </main>
 
-</body>
+        <!-- RESUMO -->
 
-</html>
+        <aside class="order-summary">
+
+            <h2>
+                Resumo do pedido
+            </h2>
+
+            <div class="summary-line">
+
+                <span>
+                    Subtotal
+                </span>
+
+                <strong>
+                    R$ 7.169,90
+                </strong>
+
+            </div>
+
+            <div class="summary-line">
+
+                <span>
+                    Frete
+                </span>
+
+                <strong>
+                    Grátis
+                </strong>
+
+            </div>
+
+            <div class="summary-line">
+
+                <span>
+                    Desconto
+                </span>
+
+                <strong>
+                    - R$ 150,00
+                </strong>
+
+            </div>
+
+
+            <!-- FRETE -->
+
+            <div class="shipping">
+
+                <label>
+                    Calcular frete
+                </label>
+
+                <div class="cep">
+
+                    <input type="text" placeholder="Digite seu CEP">
+
+                    <button type="button" (click)="onBotaoClicado()">
+                        Calcular
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TOTAL -->
+
+            <div class="summary-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong>
+                    R$ 7.019,90
+                </strong>
+
+            </div>
+
+
+            <!-- CHECKOUT -->
+
+            <button class="checkout" type="button" (click)="onBotaoClicado()">
+
+                Finalizar compra
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+            <div class="security">
+
+                <p>
+                    Compra segura e protegida
+                </p>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+</main>

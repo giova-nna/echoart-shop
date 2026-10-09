@@ -1,20 +1,9 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-}
-
-html,
-body {
-    width: 100%;
-    min-height: 100%;
-    background-color: white;
 }
 
 .pagina {
     width: 100%;
-    min-height: 100vh;
-    background-color: white;
 }
 
 .content-container {
@@ -31,9 +20,9 @@ h1 {
 .formulario {
     width: 100%;
     padding: 7px;
-    border: 1px solid #eee;
+    border: 1px solid #DDD;
     border-radius: 6px;
-    background-color: white;
+    background-color: var(--fundo-dois);
 }
 
 .campo {
@@ -43,19 +32,18 @@ h1 {
 
 .campo label {
     display: block;
-    font-size: 12px;
+    font-weight: 600;
     margin-bottom: 10px;
 }
 
 .campo input {
     width: 100%;
-    height: 24px;
-    padding: 4px 8px;
-    font-family: Arial, sans-serif;
-    font-size: 11px;
+    /* height: 24px; */
+    padding: 10px 8px;
+    font-size: .8rem;
     border: 1px solid #ccc;
-    border-radius: 3px;
-    background-color: white;
+    border-radius: 10px;
+    background-color: var(--fundo-tres);
 }
 
 .campo-id input {
@@ -67,15 +55,14 @@ h1 {
     height: 26px;
     border: none;
     border-radius: 3px;
-    background-color: #087ff5;
+    background-color: var(--fundo-um);
     color: white;
-    font-family: "Times New Roman", serif;
-    font-size: 12px;
+    font-size: 1rem;
     cursor: pointer;
 }
 
 .btn-cadastrar:hover {
-    background-color: #0069d9;
+    background-color: color-mix(in srgb, var(--fundo-um) 90%, black);
 }
 
 @media (max-width: 600px) {

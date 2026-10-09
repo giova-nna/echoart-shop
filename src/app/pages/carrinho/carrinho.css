@@ -2,41 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-
-/* =========================================
-   VARIÁVEIS
-========================================= */
-
-:root {
-    --fundo-um: #650011;
-    --fundo-dois: #ddd;
-    --fundo-tres: #eee;
-    --fundo-quatro: #850016;
-
-    --cor-letra-clara: #f0f0f0;
-    --cor-letra-escura: #222;
-
-    --white: #ffffff;
-    --border: #e1e4e8;
-    --text: #222;
-    --muted: #747b84;
-    --accent: #850016;
-    --success: #159447;
-    --danger: #d93636;
-}
-
-
-/* =========================================
-   BODY
-========================================= */
-
-html,
-body {
-    width: 100%;
-    min-height: 100%;
-}
+} 
 
 body {
     font-family: "Inter", Arial, Helvetica, sans-serif;
@@ -680,4 +646,12 @@ main {
     .order-summary {
         padding: 20px;
     }
+}
+.cart-products, .order-summary {
+    margin-bottom: 100px
+}
+.cart-product {
+    background-color: #fefefe;
+    border-radius: 15px;
+    margin-bottom: 10px;
 }

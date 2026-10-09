@@ -1,1 +1,61 @@
-<p>manutencao-produtos works!</p>
+<div class="content-container">
+
+
+    <div class="tabela-container">
+        <div class="topo">
+            <h1>Produtos Cadastrados</h1>
+            <form class="busca" action="">
+                <input type="search" name="search" id="search" placeholder="Buscar...">
+            </form>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Desconto</th>
+                    <th>Marca</th>
+                    <th>Estoque</th>
+                    <th>Valor do Desconto</th>
+                    <th>Valor Final</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @for (produto of listaProdutos; track produto ){
+                <tr>
+                    <td>{{ produto.id }}</td>
+                    <td>{{ produto.nome }}</td>
+                    <td>R$ {{ produto.preco.toFixed(2)}}</td>
+                    <td>{{ produto.desconto }}%</td>
+                    <td>{{ produto.marca }} </td>
+                    <td>{{ produto.estoque }}</td>
+                    <td>R$ {{ produto.valorDesconto.toFixed(2) }}</td>
+                    <td>R$ {{ produto.totalFinal }}</td>
+
+                    <td class="acoes">
+                        <button class="btn-editar" (click)="onBotaoClicado()">
+                            Editar
+                        </button>
+
+                        <button class="btn-excluir" (click)="onBotaoClicado()">
+                            Excluir
+                        </button>
+                    </td>
+                </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <button class="btn-incluir" (click)="onBotaoClicado()" routerLink="/gestao/controle-produtos">
+        Incluir
+    </button>
+
+</div>

@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  imports: [],
-  selector: 'app-carrinho',
-  styleUrl: './carrinho.css',
-  templateUrl: './carrinho.html',
+    imports: [],
+    selector: 'app-carrinho',
+    styleUrl: './carrinho.css',
+    templateUrl: './carrinho.html',
 })
-export class Carrinho {}
+export class Carrinho {
+    onBotaoClicado() {
+        alert('Botão funcionando!');
+    }
+}
