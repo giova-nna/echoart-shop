@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   imports: [FormsModule],
@@ -9,16 +10,18 @@ import { FormsModule } from '@angular/forms';
 })
 export class Login {
 
+    constructor(private router: Router) { };
+
     login: string = "";
     senha: string = "";
     botaoDesabilitado: boolean = true;
 
     onBotaoClicadoRecuperarSenha() {
-        alert("Que pena! Tente de novo.");
+        alert("Que pena!");
     }
 
     habilitarBotao() {
-            if (this.login.trim() !== '' && this.senha.trim() !== '') {
+        if (this.login.trim() !== '' && this.senha.trim() !== '') {
             this.botaoDesabilitado = false;
         } else {
             this.botaoDesabilitado = true;
@@ -27,11 +30,17 @@ export class Login {
 
     fazerLogin() {
         if (this.login === 'admin' && this.senha === 'admin') {
-            alert(`Bem-vindo ${this.login}!`);
+            alert(`Logado como: ${this.login}!`);
+            this.router.navigate(['/gestao']);
         } else {
-            alert('Dados inválidos');
+            if (this.login.includes('@')){
+                alert('Olá, cliente!');
+                this.router.navigate(['/carrinho']);
+            } else {
+                alert('Dados inválidos. Tente novamente.')
+            }
         }
-
+        
     }
 
 }

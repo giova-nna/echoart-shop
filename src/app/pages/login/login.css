@@ -17,7 +17,6 @@
 }
 
 form {
-    width: calc(100% - 32px);
     max-width: 400px;
     display: flex;
     flex-direction: column;
@@ -60,7 +59,7 @@ form input {
     font-size: 1.1rem;
 }
 
-.botao-login:hover {
+.botao-login:hover:not(:disabled) {
     cursor:pointer;
     font-weight: 600;
     background-color: color-mix(in srgb, var(--fundo-um) 90%, black);
@@ -82,4 +81,8 @@ form input {
     width: 1.8rem;
     justify-content: center;
     padding-right: .5rem;
+}
+
+.botao-login:disabled {
+    background-color: color-mix(in srgb, var(--fundo-um) 40%, var(--fundo-dois));
 }

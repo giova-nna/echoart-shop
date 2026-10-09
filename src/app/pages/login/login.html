@@ -10,14 +10,13 @@
                     (keyup)="habilitarBotao()" [(ngModel)]="login">
                 <label for="email">Senha</label>
                 <input class="input-login" type="password" name="senha" id="senha" placeholder="Senha"
-                    (keyup)="habilitarBotao()" [(ngModel)]="senha">>
+                    (keyup)="habilitarBotao()" [(ngModel)]="senha">
 
                 <div class="botoes-input">
-                    <button class="botao-login" type="submit" (click)="fazerLogin()">
+                    <button class="botao-login" type="submit" [disabled]="botaoDesabilitado" (click)="fazerLogin()">
                         ENTRAR
                     </button>
-                    <button class="botao-recuperar-senha" type="reset" [disabled]="botaoDesabilitado"
-                        (click)="onBotaoClicadoRecuperarSenha()">
+                    <button class="botao-recuperar-senha" type="reset" (click)="onBotaoClicadoRecuperarSenha()">
                         Esqueci minha senha
                     </button>
                 </div>

@@ -1,1 +1,24 @@
-<p>gestao works!</p>
+<div class="gestao-container">
+    <div class="entrada">
+        <h1><img src="/assets/icons/musica.svg" alt="">Bem-vindo, {{usuario.toLocaleLowerCase()}}! </h1>
+        <h3>O que deseja fazer?</h3>
+    </div>
+    <div class="escolhas">
+        <div class="clientes">
+            <button class="cadastro-clientes" routerLink="/gestao/cadastro-clientes">
+                Cadastro de Clientes
+            </button>
+            <button class="formulario-clientes" routerLink="/gestao/formulario-clientes">
+                Formulário de Clientes
+            </button>
+        </div>
+        <div class="produtos">
+            <button class="manutencao-produtos" routerLink="/gestao/manutencao-produtos">
+                Manutenção de Produtos
+            </button>
+            <button class="controle-produtos" routerLink="/gestao/controle-produtos">
+                Controle de Produtos
+            </button>
+        </div>
+    </div>
+</div>

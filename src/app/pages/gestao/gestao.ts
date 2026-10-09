@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [],
+  imports: [RouterLink],
   selector: 'app-gestao',
   styleUrl: './gestao.css',
   templateUrl: './gestao.html',
 })
-export class Gestao {}
+export class Gestao {
+  usuario = 'Administrador';
+}

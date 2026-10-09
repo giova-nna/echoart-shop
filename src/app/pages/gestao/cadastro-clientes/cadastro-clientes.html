@@ -1,74 +1,55 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="cadastro-clientes.css">
-</head>
-<body>
-    
-
-<div class="pagina">
+<div class="content-container">
 
 
-    
-    <main class="content-container">
+    <div class="tabela-container">
+        <div class="topo">
+            <h1>Cadastro de clientes</h1>
+            <form class="busca" action="">
+                <input type="search" name="search" id="search" placeholder="Buscar...">
+            </form>
+        </div>
 
-        <h1>Cadastro de Pessoas</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>CPF</th>
+                    <th>Data de Nascimento</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
 
-        <form class="formulario" (ngSubmit)="Cadastrar()">
+            <tbody>
 
-            <div class="campo campo-id">
-                <label for="id">ID</label>
-                <input
-                    type="number"
-                    id="id"
-                    name="id"
-                    placeholder="Digite o id"
-                    [(ngModel)]="pessoa.id">
-            </div>
+                @for (cliente of listaClientes; track cliente ){
+                <tr>
+                    <td>{{ cliente.id }}</td>
+                    <td>{{ cliente.nome }}</td>
+                    <td>{{ cliente.sobrenome }}</td>
+                    <td>{{ cliente.cpf }} </td>
+                    <td>{{ cliente.dataNascimento }}</td>
 
-            <div class="campo">
-                <label for="nome">Nome</label>
-                <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    placeholder="Digite o nome"
-                    [(ngModel)]="pessoa.Nome"
-                    required>
-            </div>
+                    <td class="acoes">
+                        <button class="btn-editar" (click)="onBotaoClicado()">
+                            Editar
+                        </button>
 
-            <div class="campo">
-                <label for="sobrenome">Sobrenome</label>
-                <input
-                    type="text"
-                    id="sobrenome"
-                    name="sobrenome"
-                    placeholder="Digite o sobrenome"
-                    [(ngModel)]="pessoa.Sobrenome"
-                    required>
-            </div>
+                        <button class="btn-excluir" (click)="onBotaoClicado()">
+                            Excluir
+                        </button>
+                    </td>
+                </tr>
+                }
 
-            <div class="campo">
-                <label for="dtNascimento">Data de Nascimento</label>
-                <input
-                    type="date"
-                    id="dtNascimento"
-                    name="dtNascimento"
-                    [(ngModel)]="pessoa.dtNascimento"
-                    required>
-            </div>
+            </tbody>
+        </table>
+    </div>
 
-            <button type="submit" class="btn-cadastrar">
-                Cadastrar
-            </button>
 
-        </form>
-
-    </main>
+    <button class="btn-incluir" (click)="onBotaoClicado()" routerLink="/gestao/formulario-clientes">
+        Incluir
+    </button>
 
 </div>
-</body>
-</html>
