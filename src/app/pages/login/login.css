@@ -1,0 +1,85 @@
+.container-login {
+    color: var(--cor-letra-escura);
+}
+
+.container-login label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 8px 0;
+}
+
+.login-titulo h1{
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+form {
+    width: calc(100% - 32px);
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--fundo-dois);
+    padding: 10px;
+    margin: 0 auto;
+    flex-direction: column;
+    box-shadow: 0 2px 10px #AAA;
+    border-radius: 8px;
+}
+
+form input {
+    font-size: 1rem;
+    height: 1.5rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 2PX 5px;
+}
+
+.input-login { 
+    
+    margin-bottom: 1rem;
+}
+
+.botoes-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.botao-login {
+    width: 30%;
+    margin: 0 auto;
+    background-color: var(--fundo-um);
+    color: var(--cor-letra-clara);
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    font-size: 1.1rem;
+}
+
+.botao-login:hover {
+    cursor:pointer;
+    font-weight: 600;
+    background-color: color-mix(in srgb, var(--fundo-um) 90%, black);
+
+}
+
+.botao-recuperar-senha {
+    margin: 10px ;
+    background: none;
+    border: none;
+}
+
+.botao-recuperar-senha:hover{
+    cursor:pointer;
+    font-weight: 600;
+}
+
+.icone {
+    width: 1.8rem;
+    justify-content: center;
+    padding-right: .5rem;
+}

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Carrinho</title>
+
+    <link rel="stylesheet" href="carrinho.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- TÍTULO -->
+
+        <div class="page-title">
+
+            <div>
+
+                <span class="breadcrumb">
+                    Início / Carrinho
+                </span>
+
+                <h1>Meu carrinho</h1>
+
+            </div>
+
+            <span class="items-count">
+                3 produtos
+            </span>
+
+        </div>
+
+
+        <!-- CARRINHO -->
+
+        <section class="cart-layout">
+
+            <!-- PRODUTOS -->
+
+            <section class="cart-products">
+
+                <div class="cart-header">
+
+                    <h2>Produtos</h2>
+
+                    <button
+                        class="clear-cart"
+                        type="button"
+                        onclick="alert('O carrinho foi limpo!')">
+                        Limpar carrinho
+                    </button>
+
+                </div>
+
+
+                <!-- PRODUTO 1 -->
+
+                <article class="cart-product">
+
+                    <div class="product-image">
+                        <img
+                            src="tenis.jpg"
+                            alt="Tênis Esportivo Premium">
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>
+                            Tênis Esportivo Premium
+                        </h3>
+
+                        <p>
+                            Tênis confortável para corrida e atividades esportivas.
+                        </p>
+
+                        <div class="product-details">
+
+                            <span>Cor: Preto</span>
+                            <span>Tamanho: 42</span>
+
+                        </div>
+
+                        <button
+                            class="remove-product"
+                            type="button"
+                            onclick="alert('Produto removido do carrinho!')">
+                            Remover
+                        </button>
+
+                    </div>
+
+                    <div class="product-price">
+
+                        <strong>
+                            R$ 299,90
+                        </strong>
+
+                        <span>
+                            R$ 349,90
+                        </span>
+
+                    </div>
+
+                    <div class="quantity">
+
+                        <button
+                            type="button"
+                            onclick="alert('Quantidade diminuída!')">
+                            −
+                        </button>
+
+                        <span>1</span>
+
+                        <button
+                            type="button"
+                            onclick="alert('Quantidade aumentada!')">
+                            +
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUTO 2 -->
+
+                <article class="cart-product">
+
+                    <div class="product-image">
+                        <img
+                            src="camiseta.jpg"
+                            alt="Camiseta Básica Premium">
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>
+                            Camiseta Básica Premium
+                        </h3>
+
+                        <p>
+                            Camiseta masculina em algodão de alta qualidade.
+                        </p>
+
+                        <div class="product-details">
+
+                            <span>Cor: Branca</span>
+                            <span>Tamanho: M</span>
+
+                        </div>
+
+                        <button
+                            class="remove-product"
+                            type="button"
+                            onclick="alert('Produto removido do carrinho!')">
+                            Remover
+                        </button>
+
+                    </div>
+
+                    <div class="product-price">
+
+                        <strong>
+                            R$ 89,90
+                        </strong>
+
+                    </div>
+
+                    <div class="quantity">
+
+                        <button
+                            type="button"
+                            onclick="alert('Quantidade diminuída!')">
+                            −
+                        </button>
+
+                        <span>2</span>
+
+                        <button
+                            type="button"
+                            onclick="alert('Quantidade aumentada!')">
+                            +
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUTO 3 -->
+
+                <article class="cart-product">
+
+                    <div class="product-image">
+                        <img
+                            src="relogio.jpg"
+                            alt="Relógio Inteligente">
+                    </div>
+
+                    <div class="product-info">
+
+                        <h3>
+                            Relógio Inteligente
+                        </h3>
+
+                        <p>
+                            Smartwatch com monitoramento de atividades.
+                        </p>
+
+                        <div class="product-details">
+
+                            <span>Cor: Preto</span>
+
+                        </div>
+
+                        <button
+                            class="remove-product"
+                            type="button"
+                            onclick="alert('Produto removido do carrinho!')">
+                            Remover
+                        </button>
+
+                    </div>
+
+                    <div class="product-price">
+
+                        <strong>
+                            R$ 499,90
+                        </strong>
+
+                    </div>
+
+                    <div class="quantity">
+
+                        <button
+                            type="button"
+                            onclick="alert('Quantidade diminuída!')">
+                            −
+                        </button>
+
+                        <span>1</span>
+
+                        <button
+                            type="button"
+                            onclick="alert('Quantidade aumentada!')">
+                            +
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- RESUMO -->
+
+            <aside class="order-summary">
+
+                <h2>
+                    Resumo do pedido
+                </h2>
+
+                <div class="summary-line">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong>
+                        R$ 979,70
+                    </strong>
+
+                </div>
+
+                <div class="summary-line">
+
+                    <span>
+                        Frete
+                    </span>
+
+                    <strong>
+                        Grátis
+                    </strong>
+
+                </div>
+
+                <div class="summary-line">
+
+                    <span>
+                        Desconto
+                    </span>
+
+                    <strong>
+                        - R$ 50,00
+                    </strong>
+
+                </div>
+
+
+                <!-- FRETE -->
+
+                <div class="shipping">
+
+                    <label>
+                        Calcular frete
+                    </label>
+
+                    <div class="cep">
+
+                        <input
+                            type="text"
+                            placeholder="Digite seu CEP">
+
+                        <button
+                            type="button"
+                            onclick="alert('Frete calculado!')">
+                            Calcular
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TOTAL -->
+
+                <div class="summary-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong>
+                        R$ 929,70
+                    </strong>
+
+                </div>
+
+
+                <!-- CHECKOUT -->
+
+                <button
+                    class="checkout"
+                    type="button"
+                    onclick="alert('Compra iniciada!')">
+
+                    Finalizar compra
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+
+                <!-- SEGURANÇA -->
+
+                <div class="security">
+
+                    <span>
+                        🔒
+                    </span>
+
+                    <p>
+                        Compra segura e protegida
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

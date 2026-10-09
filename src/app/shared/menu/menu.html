@@ -1,0 +1,16 @@
+<!-- estrutura do menu -->
+<nav class="menu">
+    <div class="menu-container">
+        <ul class="menu-lista">
+
+            @for(item of itensMenu; track item) {
+            <li>
+                <a href="item.link">
+                    <img class="icone" src="/assets/icons/{{item.icon}}.svg" alt="">
+                    {{item.label}}
+                </a>
+            </li>
+            }
+        </ul>
+    </div>
+</nav>

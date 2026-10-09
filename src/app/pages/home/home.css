@@ -1,0 +1,239 @@
+:host {
+    display: block;
+    font-family: Helvetica, sans-serif;
+    color: #222;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* banner com foto de fundo */
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    min-height: 320px;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: var(--cor-letra, #f0f0f0);
+    background:
+        linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
+        url('https://images.stockcake.com/public/7/1/5/715ea948-532e-478b-8cd5-7d5abbadc732/cozy-music-studio-stockcake.jpg') center / cover;
+}
+
+
+.banner h2 {
+    margin: 0;
+    max-width: 700px;
+    font-size: 2rem;
+}
+
+
+.banner p {
+    margin: 0;
+    opacity: .9;
+}
+
+
+.botao {
+    padding: .6rem 1.4rem;
+    border-radius: 50px;
+    background-color: var(--cor-letra, #f0f0f0);
+    color: var(--fundo-um, #970c13);
+    font-weight: 700;
+}
+
+
+.botao:hover {
+    opacity: .85;
+}
+
+
+/* benefícios */
+.beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+
+.beneficios h3 {
+    margin: 0 0 .25rem;
+    color: var(--fundo-um);
+}
+
+
+.beneficios p {
+    margin: 0;
+    font-size: .9rem;
+}
+
+
+/* seções e grade de 4 colunas */
+.secao {
+    padding: 1rem;
+}
+
+
+.secao h2 {
+    margin: 0 0 .75rem;
+    font-size: 1.25rem;
+}
+
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+
+/* cards de produtos */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+}
+
+
+.card-imagem {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    padding: .5rem;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+
+.selo {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    padding: .2rem .6rem;
+    border-radius: 50px;
+    background-color: var(--fundo-um);
+    color: var(--cor-letra);
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: .75rem;
+}
+
+
+.card-info h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+
+.preco-antigo {
+    margin-right: .4rem;
+    color: #777;
+    font-size: .9rem;
+    text-decoration: line-through;
+}
+
+
+.preco {
+    font-weight: 700;
+    color: var(--fundo-um);
+}
+
+
+.botao-card {
+    padding: .5rem;
+    border-radius: 6px;
+    background-color: var(--fundo-um);
+    color: var(--cor-letra);
+    text-align: center;
+}
+
+
+.botao-card:hover {
+    filter: brightness(1.2);
+}
+
+
+/* categorias com foto */
+.categoria {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    min-height: 110px;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    background-color: #d9d9d9;
+}
+
+
+.categoria img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s;
+}
+
+
+.categoria span {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.5rem .75rem .6rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, .75));
+    color: #fff;
+    font-weight: 700;
+}
+
+
+.categoria:hover img {
+    transform: scale(1.06);
+}
+
+
+/* responsivo */
+@media (max-width: 900px) {
+    .grade {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 500px) {
+    .grade,
+    .beneficios {
+        grid-template-columns: 1fr;
+    }
+
+
+    .banner h2 {
+        font-size: 1.5rem;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}   
