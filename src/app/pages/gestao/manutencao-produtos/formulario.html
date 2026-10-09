@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+    
+
+<div class="content-container">
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Data de Nascimento</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+
+        <tbody>
+          
+                <tr>
+                    <td>{{ pessoa.id }}</td>
+                    <td>{{ pessoa.Nome }}</td>
+                    <td>{{ pessoa.Sobrenome }}</td>
+                    <td>{{ pessoa.dtNascimento }}</td>
+
+                    <td class="acoes">
+                        <button
+                            class="btn-editar"
+                            [routerLink]="['alterar', pessoa.id]">
+                            Editar
+                        </button>
+
+                        <button
+                            class="btn-excluir"
+                            (click)="Excluir(pessoa.id!)">
+                            Editar
+                        </button>
+                    </td>
+                </tr>
+            
+        </tbody>
+    </table>
+
+    <button
+        class="btn-incluir"
+        [routerLink]="['incluir']">
+        Incluir
+    </button>
+
+</div>
+</body>
+</html>
