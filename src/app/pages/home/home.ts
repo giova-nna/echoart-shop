@@ -2,7 +2,6 @@ import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { Produto } from '../../models/Produtos';
 import { ProdutoService } from '../../services/produto.service';
 import { CarrinhoService } from '../../services/carrinho.service';
-import { AlertTriangle } from 'lucide';
 
 // agrupa os produtos recomendados de uma categoria (instrumento)
 interface SecaoInstrumento {

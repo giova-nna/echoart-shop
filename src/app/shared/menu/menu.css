@@ -42,3 +42,20 @@ a {
 .icone {
     width: 1.2rem;
 }
+
+@media (max-width: 480px) {
+    .menu-lista {
+        justify-content: space-around;
+        gap: 0;
+        padding: 0.4rem;
+    }
+
+    .menu-lista a {
+        margin: 0.4rem 0.2rem;
+        font-size: 0.85rem;
+    }
+
+    .icone {
+        width: 1rem;
+    }
+}

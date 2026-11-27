@@ -12,7 +12,7 @@
 }
 
 .footer:not(h3, h2) {
-    font-weight: 400;    
+    font-weight: 400;
 }
 
 .footer-logo img {
@@ -21,7 +21,7 @@
 }
 
 .footer-container {
-        width: 100%;
+    width: 100%;
     min-width: 400px;
 }
 
@@ -58,7 +58,8 @@
 }
 
 
-.footer-container h3, .footer-container h2 {
+.footer-container h3,
+.footer-container h2 {
     margin-bottom: .5rem;
 }
 
@@ -79,4 +80,32 @@
 img {
     width: 1rem;
     padding-right: .5rem;
+}
+
+@media (max-width: 480px) {
+    .footer-principal {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .footer-principal>div {
+        width: 100%;
+        flex: none;
+        text-align: center;
+    }
+
+    .footer-container li {
+        text-align: center;
+    }
+
+    .footer-logo img {
+        width: 6rem;
+    }
+
+    .copyright {
+        padding: 0.5rem 1rem 1rem;
+    }
 }

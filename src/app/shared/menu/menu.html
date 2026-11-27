@@ -5,8 +5,8 @@
 
             @for(item of itensMenu; track item) {
             <li>
-                <a href="item.link">
-                    <img class="icone" src="/assets/icons/{{item.icon}}.svg" alt="">
+                <a href="#{{item.label.toLowerCase().trim()}}">
+                    <img class="icone" src="assets/icons/{{item.icon}}.svg" alt="">
                     {{item.label}}
                 </a>
             </li>
