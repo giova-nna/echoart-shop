@@ -31,11 +31,12 @@
 }
 
 a {
-    margin: .5rem ;
+    margin: .5rem;
 }
 
 .menu-lista a:hover {
-    font-weight: 600;
+    font-weight: 500;
+    transform: scale(1.08)
 }
 
 .icone {

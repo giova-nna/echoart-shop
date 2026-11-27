@@ -28,19 +28,23 @@
     <h2>Compre por categoria</h2>
     <div class="grade">
         <a class="categoria" href="#cordas" (click)="rolarPara('cordas', $event)">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Guitar_strings_-_corde_chitarra_piolo.jpg?width=600" alt="Cordas">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Guitar_strings_-_corde_chitarra_piolo.jpg?width=600"
+                alt="Cordas">
             <span>Cordas</span>
         </a>
         <a class="categoria" href="#bateria-e-percussao" (click)="rolarPara('bateria-e-percussao', $event)">
-            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jonathan_Moffett_Gold_Drum_Kit.jpg?width=600" alt="Bateria e percussão">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jonathan_Moffett_Gold_Drum_Kit.jpg?width=600"
+                alt="Bateria e percussão">
             <span>Bateria e Percussão</span>
         </a>
         <a class="categoria" href="#teclas" (click)="rolarPara('teclas', $event)">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDTbbI_UUwGz_liUHlC-buW_w1cJLCcPB-aSmqHwKAfd37sI6S52eWtFQ&s=10" alt="Teclas">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDTbbI_UUwGz_liUHlC-buW_w1cJLCcPB-aSmqHwKAfd37sI6S52eWtFQ&s=10"
+                alt="Teclas">
             <span>Teclas</span>
         </a>
         <a class="categoria" href="#sopro" (click)="rolarPara('sopro', $event)">
-            <img src="https://media.istockphoto.com/id/523146717/pt/foto/na-tabela-de-instrumentos-de-sopro.jpg?s=612x612&w=0&k=20&c=Lq2I5a2ERi8KVPdGZUFz7JBQFW3QVYvGC9XAao6D5S4=" alt="Sopro">
+            <img src="https://media.istockphoto.com/id/523146717/pt/foto/na-tabela-de-instrumentos-de-sopro.jpg?s=612x612&w=0&k=20&c=Lq2I5a2ERi8KVPdGZUFz7JBQFW3QVYvGC9XAao6D5S4="
+                alt="Sopro">
             <span>Sopro</span>
         </a>
     </div>
@@ -65,7 +69,8 @@
                 @if (produto.desconto > 0) {
                 <span class="selo">-{{ percentual(produto) }}%</span>
                 }
-                <img class="card-imagem" [class.sem-foto]="!produto.imagem" [src]="imagemDe(produto)" [alt]="produto.nome">
+                <img class="card-imagem" [class.sem-foto]="!produto.imagem" [src]="imagemDe(produto)"
+                    [alt]="produto.nome">
                 <div class="card-info">
                     <h3>{{ produto.nome }}</h3>
                     <p class="marca">{{ produto.marca }}</p>

@@ -18,7 +18,19 @@
 
         <div class="header-direita">
             <a href="/carrinho"><img class="icone" src="/assets/icons/carrinho.svg" alt=""></a>
-            <a href="/login"><img class="icone" src="/assets/icons/usuario.svg" alt=""></a>
+            @if (autenticacaoService.estaLogado()) {
+            <div class="menu-usuario">
+                @if (autenticacaoService.recuperarUsuario()?.tipo === 'admin') {
+                <a href="/gestao"><img class="icone" src="/assets/icons/usuario.svg" alt=""></a>
+                } @else {<a><img class="icone" src="/assets/icons/usuario.svg" alt=""></a>}
+
+                <div class="opcoes-usuario">
+                    <button (click)="sair()">Sair</button>
+                </div>
+            </div>
+            } @else {
+            <a routerLink="/login"><img class="icone" src="/assets/icons/usuario.svg" alt=""></a>
+            }
         </div>
     </div>
 </header>

@@ -74,3 +74,39 @@
 .logo-svg {
     width: 150px;
 }
+
+
+/* pro menu de login */
+.menu-usuario {
+    position: relative;
+}
+
+.opcoes-usuario {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+
+.menu-usuario:hover .opcoes-usuario {
+    display: block;
+    background-color: var(--fundo-tres);
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.menu-usuario:hover .opcoes-usuario button {
+    padding: 6px;
+    background-color: none;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    color: color-mix(in srgb, var(--fundo-um) 80%, black)
+}
+
+.menu-usuario:hover .opcoes-usuario button:hover {
+    cursor: pointer;
+}

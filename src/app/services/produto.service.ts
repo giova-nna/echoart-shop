@@ -14,7 +14,7 @@ export class ProdutoService {
 
     // localhost: máquina local de acesso
     // 3000: porta padrão do json-server
-    // /clientes: banco de dados json acessado
+    // /produtos: banco de dados json acessado
 
     constructor(private http: HttpClient) { } // inicia variáveis e dependências - é o que permite fazer get, post etc
 

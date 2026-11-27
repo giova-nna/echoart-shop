@@ -1,6 +1,8 @@
 import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { Produto } from '../../models/Produtos';
 import { ProdutoService } from '../../services/produto.service';
+import { CarrinhoService } from '../../services/carrinho.service';
+import { AlertTriangle } from 'lucide';
 
 // agrupa os produtos recomendados de uma categoria (instrumento)
 interface SecaoInstrumento {
@@ -18,6 +20,7 @@ interface SecaoInstrumento {
 })
 export class Home implements OnInit {
     private service = inject(ProdutoService);
+    private carrinhoService = inject(CarrinhoService);
 
     // signal: a tela atualiza sozinha quando o valor muda
     produtos = signal<Produto[]>([]);
@@ -89,11 +92,28 @@ export class Home implements OnInit {
         return `/assets/icons/${instrumento ? instrumento.icone : 'musica'}.svg`;
     }
 
-    // botão "Comprar" dos cards.
-    // TODO (combinar com o C. Eduardo): trocar o alert pela chamada do service do carrinho,
-    // ex.: this.carrinhoService.adicionar(produto)
+    // botão "Comprar" dos cards: adiciona 1 unidade no carrinho (CarrinhoService do C. Eduardo)
     adicionarAoCarrinho(produto: Produto, evento?: Event) {
         evento?.stopPropagation(); // não dispara o clique do card (modal do leo)
+
+        // modificação pra impedir de adicionar itens fora de esotque - giovanna
+
+        // procura no carrinho o item em questao
+        const item = this.carrinhoService.listarItens().find(item => item.produto.id === produto.id);
+
+        // pega a quantidade em carrinho (se encontrar)
+        const quantidadeAtual = item ? item.quantidade : 0;
+
+        // se a próxima adição no carrinho for maior que o número de unidades em estoque, não deixa
+        if (produto.estoque == 0) {
+            alert('Item fora de estoque.');
+            return;
+        } else if (quantidadeAtual + 1 > produto.estoque) {
+            alert('Quantidade indisponível em estoque.');
+            return;
+        }
+
+        this.carrinhoService.adicionarProduto(produto);
         alert(`${produto.nome} adicionado ao carrinho!`);
     }
 }

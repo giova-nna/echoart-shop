@@ -8,10 +8,9 @@
     margin: 8px 0;
 }
 
-.login-titulo h1{
+.login-titulo h1 {
     text-align: center;
-    padding-top: 3rem;
-    padding-bottom: 1rem;
+    margin: 6rem auto 2rem auto;
     font-weight: 500;
     letter-spacing: 1.5px;
 }
@@ -36,8 +35,8 @@ form input {
     padding: 2PX 5px;
 }
 
-.input-login { 
-    
+.input-login {
+
     margin-bottom: 1rem;
 }
 
@@ -60,29 +59,38 @@ form input {
 }
 
 .botao-login:hover:not(:disabled) {
-    cursor:pointer;
+    cursor: pointer;
     font-weight: 600;
     background-color: color-mix(in srgb, var(--fundo-um) 90%, black);
 
 }
 
-.botao-recuperar-senha {
-    margin: 10px ;
-    background: none;
-    border: none;
-}
-
-.botao-recuperar-senha:hover{
-    cursor:pointer;
+.botao-recuperar-senha:hover {
+    cursor: pointer;
     font-weight: 600;
 }
 
 .icone {
-    width: 1.8rem;
+    width: 1.6rem;
     justify-content: center;
     padding-right: .5rem;
 }
 
 .botao-login:disabled {
     background-color: color-mix(in srgb, var(--fundo-um) 40%, var(--fundo-dois));
+}
+
+.cadastro {
+    margin: 1rem auto .6rem auto;
+}
+
+.cadastro a {
+    text-decoration: none;
+    color: var(--fundo-um);
+    font-weight: 600;
+}
+
+.cadastro a:hover {
+    transform: scale(1.1);
+    color: var(--cor-letra-escura)
 }
