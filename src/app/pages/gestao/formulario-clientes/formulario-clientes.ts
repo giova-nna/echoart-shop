@@ -36,7 +36,7 @@ export class FormularioClientes implements OnInit {
       this.service.editar(this.cliente).subscribe({
         next: () => {
           alert('Cliente atualizado com sucesso!');
-          this.router.navigate(['/gestao/cadastro-clientes']);
+          this.router.navigate(['/gestao/gestao-clientes']);
         },
         error: () => alert('Erro ao atualizar cliente.')
       });
@@ -44,7 +44,7 @@ export class FormularioClientes implements OnInit {
       this.service.incluir(this.cliente).subscribe({
         next: () => {
           alert('Cliente cadastrado com sucesso!');
-          this.router.navigate(['/gestao/cadastro-clientes']);
+          this.router.navigate(['/login']);
         },
         error: () => alert('Erro ao cadastrar cliente.')
       });
